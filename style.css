@@ -1,0 +1,171 @@
+/* Warna Tema */
+:root {
+    --coksu: #E1C699;
+    --moca: #A38A73;
+    --header-bg: #fdfaf5; /* Krem moca sangat muda */
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 25px;
+    background-color: var(--header-bg); /* Background Header */
+    border-bottom: 2px solid var(--coksu); /* Garis bawah warna Coksu */
+    gap: 20px;
+}
+
+/* Mengatur ukuran & warna ikon */
+.icon-btn {
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: var(--moca); /* Ikon warna Moca */
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.icon-btn:hover {
+    background-color: #f2e9dc;
+    color: #5d4037; /* Moca gelap saat di-hover */
+}
+
+/* Gaya khusus kolom cari */
+.search-bar {
+    flex: 1;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-icon {
+    position: absolute;
+    left: 15px;
+    color: var(--moca);
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 10px 45px;
+    border-radius: 25px;
+    border: 1px solid var(--coksu);
+    background-color: white;
+    outline: none;
+}
+
+/* Bulatan Profil */
+.profile-pic {
+    width: 35px;
+    height: 35px;
+    background-color: var(--moca);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0 30px 0; /* Memberi jarak bawah agar tidak menempel ke gambar */
+    background-color: rgb(247, 219, 169);
+    position: sticky; /* Membuat pencarian tetap di atas saat scroll */
+    top: 0;
+    z-index: 100;
+}
+
+.search-bar {
+    width: 90%;
+    max-width: 800px; /* Membatasi lebar maksimal agar estetik */
+    position: relative;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 12px 25px 12px 45px;
+    border-radius: 30px;
+    border: none;
+    background-color: #efefef; /* Warna abu-abu muda khas Pinterest */
+    font-size: 16px;
+    outline: none;
+    transition: background-color 0.2s;
+}
+
+.search-bar input:hover {
+    background-color: #e2e2e2;
+}
+
+.search-bar input:focus {
+    border: 2px solid #007bff; /* Memberi tanda saat diklik */
+    background-color: white;
+}
+
+/* Pastikan container gambar punya jarak yang pas */
+.pin-container {
+    column-count: 5;
+    column-gap: 15px;
+    width: 95%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    padding: 20px;
+}
+
+/* Container utama menggunakan Column Layout */
+.pin-container {
+    column-count: 5; /* Jumlah kolom di desktop */
+    column-gap: 15px; /* Jarak antar kolom */
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Kartu Gambar */
+.pin-card {
+    display: inline-block; /* Penting agar kartu tidak terpotong antar kolom */
+    width: 100%;
+    margin-bottom: 15px; /* Jarak antar gambar ke bawah */
+    background-color: white;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: transform 0.2s;
+}
+
+.pin-card img {
+    width: 100%;
+    height: auto; /* Gambar akan mengikuti proporsi aslinya */
+    display: block;
+    border-radius: 16px;
+}
+
+.pin-card p {
+    padding: 8px 5px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.pin-card:hover {
+    transform: scale(1.02);
+    cursor: zoom-in;
+}
+
+/* Agar responsif di layar lebih kecil */
+@media (max-width: 1000px) {
+    .pin-container { column-count: 3; }
+}
+
+@media (max-width: 600px) {
+    .pin-container { column-count: 2; }
+}
